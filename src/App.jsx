@@ -1,6 +1,5 @@
 import { createRef, forwardRef, useEffect, useRef, useState } from 'react'
 import UserCard from './UserCard'
-import logo from './logo.svg'
 import { Spinner } from '@chakra-ui/react'
 import hoverVertStyle from './hoverEffectVert.module.css'
 
