@@ -1,22 +1,30 @@
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import LinkIcon from '@mui/icons-material/Link';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
 
 
 function UserCard({data}) {
-    return <div className="border">
-        <h2 className="text-xl lg:text-2xl font-bold leading-5 lg:leading-6">{data.name + " "}<span className="block lg:inline text-sm lg:text-base text-gray-500 font-medium">{"@" + data.username}</span></h2>
-        <div className="mt-1 text-xs lg:text-sm">
-            <p>{data.email}</p>
-            <p>{data.website}</p>
-            <p>{data.phone}</p>
+    return <div className="border border-gray-400 px-3 lg:px-6 py-3 lg:py-5 bg-slate-100">
+        <div className="text-xl lg:text-2xl font-bold leading-6 lg:leading-6 border-b border-gray-300 pb-[2px] lg:pb-[4px]">{data.name}<span className="block lg:inline text-sm lg:text-base text-gray-500 font-medium lg:ml-2">{"@" + data.username}</span></div>
+        <div className="mt-1 text-xs lg:text-base lg:flex">
+            <div className='font-bold flex items-center grow shrink basis-auto'><EmailIcon sx={{fontSize:14}} /><div className='mx-1'><a href={"mailto:" + data.email}>{data.email}</a></div></div>
+            <div className='font-bold flex items-center grow shrink basis-auto'><LinkIcon sx={{fontSize:14}} /><div className='mx-1'><a href="/">{data.website}</a></div></div>
+            <div className='font-bold flex items-center grow shrink basis-auto'><LocalPhoneIcon sx={{fontSize:14}} /><div className='mx-1'>{data.phone.split(/[-.\s]/).filter((part)=> part[0]!== "x").join(" ")}</div></div>
+        </div>
+        <div className='lg:grid lg:grid-cols-2 lg:gap-6 mt-1 lg:mt-2 space-y-1 lg:space-y-0'>
+        <div className="text-xs lg:text-base">
+            <div className="text-sm lg:text-lg text-slate-500 border-b border-gray-300">Address</div>
+            <p className='font-bold'>{`${data.address.suite} ${data.address.street}, ${data.address.city} ${data.address.zipcode}`}</p>
 
         </div>
-        <div className="mt-2 text-xs lg:text-sm">
-            <p>{`${data.address.suite} ${data.address.street}, ${data.address.city} ${data.address.zipcode}`}</p>
+        <div className="text-xs lg:text-base">
+            <div className="text-sm lg:text-lg text-slate-500 border-b border-gray-300">Company</div>
+            <p className='font-bold'>{data.company.name}</p>
+            <p className=''>{data.company.catchPhrase}</p>
+            <p className=''>{data.company.bs}</p>
 
         </div>
-        <div className="mt-2 text-xs lg:text-sm">
-            <h3 className="text-lg lg:text-xl">{data.company.name}</h3>
-            <p>{data.company.catchPhrase}</p>
-            <p>{data.company.bs}</p>
 
         </div>
     </div>

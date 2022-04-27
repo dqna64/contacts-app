@@ -6,8 +6,6 @@ const DATA_URL = 'https://jsonplaceholder.typicode.com/users'
 const DATA_ERROR_MSG = "Sorry, data could not be loaded at this time."
 
 function App() {
-  const [count, setCount] = useState(0)
-
   const [users, setUsers] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -29,8 +27,9 @@ function App() {
   }, []);
 
   return (
-    <div className='px-2 py-4 lg:px-12 lg:py-6'>
-      <div className='border max-w-screen-sm mx-auto space-y-5 lg:space-y-8'>
+    <div className='px-2 py-3 lg:px-12 lg:py-5'>
+      <div className='max-w-screen-sm mx-auto space-y-5 lg:space-y-8'>
+      <div className='text-4xl lg:text-5xl font-bold text-gray-900'>{'My Contacts'}</div>
         {loading ? 'Loading...' : error ? DATA_ERROR_MSG : users.map((user) => <UserCard key={user.id} data={user}/>)}
       </div>
     </div>

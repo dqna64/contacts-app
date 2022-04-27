@@ -28,3 +28,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  color: rgb(51, 108, 214);
+}
+
+a:hover {
+  text-decoration: underline;
+}
