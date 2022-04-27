@@ -67,6 +67,9 @@ function App() {
           )}
         </div>
       </div>
+      <div className='max-w-screen-lg mx-auto mt-6 pt-2 border-t border-gray-300 flex justify-center text-xs'>
+        <span>{'Made by '}</span><a className="ml-[3px] text-blue-500" href='https://github.com/dqna64'>{'@dqna64'}</a><span className="inline-block px-2">{"|"}</span><a className='text-blue-500' href='https://github.com/dqna64/contacts-app'>Source code</a>
+      </div>
     </div>
   )
 }
