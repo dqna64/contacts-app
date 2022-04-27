@@ -42,7 +42,7 @@ function App() {
         {'My Contacts'}
       </div>
       <div className="max-w-screen-lg mx-auto flex justify-center items-start sm:space-x-5 lg:space-x-8">
-        <div className="hidden sm:block sticky top-4 px-2 lg:px-5 py-3 lg:py-5 grow-0 shrink-0 basis-[180px] lg:basis-[280px] border border-gray-400 bg-slate-100 space-y-1 lg:space-y-2">
+        <div className="hidden sm:block sticky top-4 max-h-screen overflow-x-hidden px-2 lg:px-5 py-3 lg:py-5 grow-0 shrink-0 basis-[180px] lg:basis-[280px] border border-gray-400 bg-slate-100 space-y-1 lg:space-y-2">
           <div className='text-lg lg:text-2xl border-b border-gray-300'>{'Contacts List'}</div>
           {loading ? (
             <Spinner />
