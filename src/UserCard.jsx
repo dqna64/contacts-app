@@ -31,13 +31,13 @@ function UserCard({ template, data }) {
             <div className="font-bold flex items-center grow shrink basis-auto">
               <EmailIcon sx={{ fontSize: 14 }} />
               <div className="mx-1">
-                <a href={'mailto:' + data.email}>{data.email}</a>
+                <a className='text-blue-500' href={'mailto:' + data.email}>{data.email}</a>
               </div>
             </div>
             <div className="font-bold flex items-center grow shrink basis-auto">
               <LinkIcon sx={{ fontSize: 14 }} />
               <div className="mx-1">
-                <a href="/">{data.website}</a>
+                <a className='text-blue-500' href="/">{data.website}</a>
               </div>
             </div>
             <div className="font-bold flex items-center grow shrink basis-auto">
