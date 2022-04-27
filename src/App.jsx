@@ -29,8 +29,8 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <div>
+    <div className='px-2 py-4 lg:px-12 lg:py-6'>
+      <div className='border max-w-screen-sm mx-auto space-y-5 lg:space-y-8'>
         {loading ? 'Loading...' : error ? DATA_ERROR_MSG : users.map((user) => <UserCard key={user.id} data={user}/>)}
       </div>
     </div>
