@@ -1,0 +1,41 @@
+.highlightVert {
+  display: inline-block;
+  height: 100%;
+  @apply py-[1px] lg:py-[2px];
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.highlightVert:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e09265;
+  -webkit-transform: scaleY(0.1);
+  transform: scaleY(0.08);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.highlightVert:hover, .highlightVert:focus, .highlightVert:active {
+  color: rgb(248, 248, 248);
+}
+.highlightVert:hover:before, .highlightVert:focus:before, .highlightVert:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
